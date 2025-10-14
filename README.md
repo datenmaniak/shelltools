@@ -37,7 +37,7 @@ Puedes invocar cualquier herramienta desde tu shell con alias o funciones. Ejemp
 alias buscar_palabra='python3 ~/shelltools/search/search_files_with.py'
 ```
 ```
-alias nginxpm='bash ~/shelltools/nginx-projects/nginx-project-manager.sh'
+alias nginxpm='sudo ~/shelltools/nginx-projects/nginx-project-manager.sh'
 ```
 
 
