@@ -144,20 +144,40 @@ alias nginx-stop='zsh ~/shelltools/nginx-projects/easy-commands/stop-nginx-php.z
 alias nginxpm='bash ~/shelltools/nginx-projects/nginx-project-manager.sh'
 ```
 
+## 🛠️ Instalador de comandos: instala_comandos.zsh
 
-## Próximo a agregar
-🧪 environment (ejemplo)
+Script que registra comandos ejecutables en `~/bin/` para que puedan usarse desde cualquier terminal, incluso con `sudo`. También valida que `~/bin` esté en tu `$PATH`, y ofrece recargar el shell automáticamente.
+
+### 📁 Ubicación recomendada
+Guarda el script en:
+
+    ~/shelltools/installers/instala_comandos.zsh
+
+---
+
+## 📦 Comandos registrados
+
+- `nginxpm` → Gestor interactivo de proyectos Nginx
+- `nginx-on`, `nginx-off`, `nginx-restart`, `nginx-stop` → Control rápido de servicios Nginx + PHP-FPM
+- `search_files_with` → Búsqueda de palabras clave en archivos
+
+---
+
+## 🚀 Ejecución
+
+```bash
+zsh ~/shelltools/installers/instala_comandos.zsh
+```
+
+🧪 Verificación
+
+Ahora prueba:
 
 ```
-alias detecta_sudo='zsh ~/shelltools/environment/detecta_sudo_context.zsh'
-alias verifica_home='zsh ~/shelltools/environment/verifica_home_real.zsh'
+search_files_with systemd ~/dotfiles
 ```
 
-🎨 branding (ejemplo)
-```
-alias banner-violet='python3 ~/shelltools/branding/genera_banner.py'
-alias prompt-violet='zsh ~/shelltools/branding/prompt_personalizado.zsh'
-```
+🛠️ En caso de que no aparezcan los comandos, reinicie la consola.
 
 ---
 
@@ -206,3 +226,19 @@ nginxpm() {
 ```
 ⚠️ Las funciones tampoco se heredan por sudo.
 
+
+
+
+## Próximo cambios
+🧪 environment (ejemplo)
+
+```
+alias detecta_sudo='zsh ~/shelltools/environment/detecta_sudo_context.zsh'
+alias verifica_home='zsh ~/shelltools/environment/verifica_home_real.zsh'
+```
+
+🎨 branding (ejemplo)
+```
+alias banner-violet='python3 ~/shelltools/branding/genera_banner.py'
+alias prompt-violet='zsh ~/shelltools/branding/prompt_personalizado.zsh'
+```
