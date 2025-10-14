@@ -135,6 +135,10 @@ alias nginx-off='zsh ~/shelltools/nginx-projects/easy-commands/disable-nginx-php
 ```
 alias nginx-restart='zsh ~/shelltools/nginx-projects/easy-commands/restart-nginx-php.zsh'
 ```
+```
+alias nginx-stop='zsh ~/shelltools/nginx-projects/easy-commands/stop-nginx-php.zsh'
+```
+
 🧩 nginx-project-manager
 ```
 alias nginxpm='bash ~/shelltools/nginx-projects/nginx-project-manager.sh'
@@ -154,3 +158,51 @@ alias verifica_home='zsh ~/shelltools/environment/verifica_home_real.zsh'
 alias banner-violet='python3 ~/shelltools/branding/genera_banner.py'
 alias prompt-violet='zsh ~/shelltools/branding/prompt_personalizado.zsh'
 ```
+
+---
+
+## 🛠️ En caso de errores
+
+### ✗ `sudo: nginxpm: command not found`
+
+Este error ocurre porque los alias definidos en tu shell (`.zshrc`, `.bashrc`) **no se heredan automáticamente** cuando usas `sudo`. El sistema busca un comando real llamado `nginxpm`, y al no encontrarlo en `$PATH`, lanza el error.
+
+---
+
+### ✅ Soluciones recomendadas
+
+#### 🔹 Opción 1: Ejecutar directamente con `sudo`
+
+```bash
+sudo bash ~/shelltools/nginx-projects/nginx-project-manager.sh
+```
+
+#### 🔹 Opción 2: Crear un comando ejecutable en tu $PATH
+
+1. Crea el archivo nginxpm en ~/bin/:
+
+```
+mkdir -p ~/bin
+echo 'bash ~/shelltools/nginx-projects/nginx-project-manager.sh "$@"' > ~/bin/nginxpm
+chmod +x ~/bin/nginxpm
+```
+2. Asegúrate de que ~/bin esté en tu $PATH:
+
+```
+export PATH="$HOME/bin:$PATH"
+```
+3. Ahora puedes ejecutar:
+
+ ```
+ sudo nginxpm
+```
+🔹 Opción 3: Usar función en shell (sin sudo)
+
+
+```
+nginxpm() {
+  bash ~/shelltools/nginx-projects/nginx-project-manager.sh "$@"
+}
+```
+⚠️ Las funciones tampoco se heredan por sudo.
+
