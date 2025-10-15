@@ -18,3 +18,11 @@ Este módulo instala y configura VSCodium con extensiones para desarrollo web, a
 ```
 bash ~/shelltools/web-development/vscodium/setup.sh
 ```
+
+## 🧭 Wrapper interactivo
+
+Ejecuta el wrapper para opciones guiadas:
+
+```
+zsh ~/shelltools/web-development/vscodium/wrapper.zsh
+```
