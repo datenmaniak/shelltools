@@ -10,8 +10,8 @@ fi
 PID=$(pgrep gammastep)
 
 if [ -z "$PID" ]; then
-  gammastep -O 4000 &
-  notify-send "Filtro azul activado" "Gammastep está ahora en modo cálido (3000K)"
+  gammastep -O 3800 &
+  notify-send "Filtro azul activado" "Gammastep está ahora en modo cálido (3800K)"
 else
   kill "$PID"
   notify-send "Filtro azul desactivado" "Gammastep ha sido detenido"
