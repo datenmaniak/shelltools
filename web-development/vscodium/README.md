@@ -49,3 +49,17 @@ Ejecuta el script desde terminal:
 ```
 bash ~/shelltools/web-development/vscodium/install-themes.sh
 ```
+
+## ⚙️ Configuración sugerida
+Agrega a tu settings.json para iniciar con el tema más suave:
+
+```
+"workbench.colorTheme": "GitHub Dark Dimmed",
+"editor.fontFamily": "Fira Code, JetBrains Mono, monospace",
+"editor.fontSize": 15,
+"editor.lineHeight": 22,
+"editor.cursorSmoothCaretAnimation": "off",
+"editor.renderWhitespace": "boundary"
+
+
+```
