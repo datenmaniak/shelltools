@@ -26,3 +26,26 @@ Ejecuta el wrapper para opciones guiadas:
 ```
 zsh ~/shelltools/web-development/vscodium/wrapper.zsh
 ```
+
+# 🎨 Instalador de Temas para VSCodium 
+
+Este módulo instala una selección curada de temas visuales para **VSCodium**, optimizados para reducir la fatiga ocular en sesiones prolongadas de desarrollo web. Ideal para entornos con doble monitor como el tuyo, donde la legibilidad y el confort visual son clave.
+
+---
+
+## 🧠 Propósito
+
+- Minimizar el cansancio visual durante largas jornadas de trabajo.
+- Ofrecer paletas suaves, cálidas o equilibradas.
+- Garantizar buena legibilidad en HTML, CSS, JS, PHP y otros lenguajes web.
+- Integrarse modularmente en tu sistema `shelltools`.
+
+---
+
+## 📦 Instalación
+
+Ejecuta el script desde terminal:
+
+```
+bash ~/shelltools/web-development/vscodium/install-themes.sh
+```
