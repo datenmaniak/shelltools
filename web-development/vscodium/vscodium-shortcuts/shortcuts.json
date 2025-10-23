@@ -1,0 +1,27 @@
+[
+  {
+    "key": "ctrl+alt+j",
+    "command": "editor.action.formatDocument"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "editor.action.selectHighlights"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "textPowerTools.removeEmptyLines"
+  },
+  {
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "workbench.action.openFolder"
+  }
+]
+
