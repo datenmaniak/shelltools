@@ -1,0 +1,11 @@
+// === SCSS ===
+
+// TODO: ajustar mixin para breakpoints móviles
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    // LEARN: explorar uso de clamp() para tamaños fluidos
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}
+
+// REMOVE: estilos obsoletos para pantallas pequeñas
