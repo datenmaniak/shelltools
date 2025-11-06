@@ -95,11 +95,7 @@ if [ "$selected_browser" != "none" ]; then
   fi
 fi
 
-# Validar estructura JSON antes de modificar
-if ! jq empty "$CONFIG_PATH" 2>/dev/null; then
-  echo "⚠️ El archivo settings.json está corrupto. Se regenerará."
-  echo "{}" > "$CONFIG_PATH"
-fi
+
 
 generate_css() {
   local CSS_PATH="./style.css"
@@ -157,10 +153,31 @@ tbody td[colspan="2"] {
 EOF
 }
 
+# REMOVE 
+# # Validar estructura JSON antes de modificar
+# if ! jq empty "$CONFIG_PATH" 2>/dev/null; then
+#   echo "⚠️ El archivo settings.json está corrupto. Se regenerará."
+#   echo "{}" > "$CONFIG_PATH"
+# fi
+
+# # Crear respaldo del settings.json antes de modificar
+# BACKUP_PATH="${CONFIG_PATH}.bak.$(date +%Y%m%d%H%M%S)_before_${browser_cmd}"
+# cp "$CONFIG_PATH" "$BACKUP_PATH"
+# echo "🗂️ Respaldo creado en: $BACKUP_PATH"
+# remove 
+
 # Crear respaldo del settings.json antes de modificar
 BACKUP_PATH="${CONFIG_PATH}.bak.$(date +%Y%m%d%H%M%S)_before_${browser_cmd}"
 cp "$CONFIG_PATH" "$BACKUP_PATH"
 echo "🗂️ Respaldo creado en: $BACKUP_PATH"
+
+# Validar estructura JSON después de respaldar
+if ! jq empty "$CONFIG_PATH" 2>/dev/null; then
+  echo "⚠️ El archivo settings.json está corrupto. Se regenerará desde cero."
+  echo "{}" > "$CONFIG_PATH"
+fi
+
+
 
 # Fusión segura con configuración existente
 jq --arg browser "$browser_cmd" \

@@ -46,6 +46,18 @@ jq '. + {
     "color": "#000000",
     "backgroundColor": "#FF9900",
     "bold": true
+  },
+   {
+    "tag": "BEGIN",
+    "color": "#000000",
+    "backgroundColor": "#EDF000",
+    "bold": true
+  },
+  {
+    "tag": "END",
+    "color": "#000000",
+    "backgroundColor": "#EDF000",
+    "bold": true
   }
 ]
 }' "$SETTINGS_FILE" > "$SETTINGS_FILE.tmp" && mv "$SETTINGS_FILE.tmp" "$SETTINGS_FILE"
