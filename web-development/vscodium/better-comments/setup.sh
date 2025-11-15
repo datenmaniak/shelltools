@@ -32,7 +32,7 @@ jq '. + {
   {
     "tag": "TODO",
     "color": "#FFFFFF",
-    "backgroundColor": "#7700F0",
+    "backgroundColor": "#F00077",
     "bold": true
   },
   {
