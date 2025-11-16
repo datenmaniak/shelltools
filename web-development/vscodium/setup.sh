@@ -58,6 +58,7 @@ cat <<EOF > ~/.config/VSCodium/User/settings.json
   "editor.fontLigatures": true,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
+  "editor.lineHeight": 16,
   "files.autoSave": "onFocusChange",
   "terminal.integrated.fontFamily": "monospace",
   "editor.tokenColorCustomizations": {
